@@ -31,6 +31,7 @@
             left: 0;
             background-size: 50%;
             background-position: bottom 100px right -460px;
+            z-index: 1;
         
             
             
@@ -90,12 +91,14 @@
     }
     &__ctaButton
     {
+        
         @include breakpoint-up(large)
         {
             text-align: end;
             justify-content: center;
             align-self: center;
         }
+        z-index: 3;
     }
 }
 
@@ -106,8 +109,14 @@
 {
     background-color: $veryDarkBlue;
     padding-top: 3.125rem;
+    @include breakpoint-up(large)
+    {
+        padding-top: 3.75rem;
+        padding-bottom: 3.125rem;
+    }
     &__form
     {
+        text-align: center;
         margin-bottom: 3.5625rem;
         input[type= "email"]
         {
@@ -153,7 +162,10 @@
         
         flex-direction: column;
         align-items: start;
-        padding-left: 2.3125rem;
+        @include breakpoint-down(medium)
+        {
+            padding-left: 2.3125rem;
+        }
         
         a
         {
@@ -161,11 +173,16 @@
             font-size: $smallFont;
             color: $white;
             font-weight: 400;
+            transition: all 200ms ease-in-out;
             
             &:not(:last-child)
             {
                 margin-bottom: 1.125rem;
 
+            }
+            &:hover
+            {
+                color: $brightRed;
             }
 
         }
@@ -177,7 +194,11 @@
         
         flex-direction: column;
         align-items: start;
-        padding-left: 2.3125rem;
+
+        @include breakpoint-down(medium)
+        {
+            padding-left: 2.3125rem;
+        }
         
         a
         {
@@ -185,10 +206,15 @@
             font-size: $smallFont;
             color: $white;
             font-weight: 400;
+            transition: all 200ms ease-in-out;
             &:not(:last-child)
             {
                 margin-bottom: 1.125rem;
 
+            }
+            &:hover
+            {
+                color: $brightRed;
             }
 
         }
@@ -196,19 +222,28 @@
 
     &__socialIcons
     {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 3rem;
+        @include breakpoint-down(medium)
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
         a
         {
             
-            
+            transition: all 200ms ease-in-out;
             &:not(:last-child)
             {
                 margin-right: 2rem;
+                @include breakpoint-up(large)
+                {
+                    margin-right: 0.75rem;
+                }
+
 
             }
+            
             
             
             &:hover
@@ -229,6 +264,10 @@
     {
         text-align: center;
         margin-bottom: 3rem;
+        @include breakpoint-up(large)
+        {
+            text-align: start;
+        }
     }
 
     &__copyright
@@ -237,7 +276,26 @@
         color: $darkGrayishBlue;
         text-align: center;
         margin-bottom: 1.5rem;
+        @include breakpoint-up(large)
+        {
+            text-align: end;
+        }
     }
+
+    &__grid
+    {
+        display: grid;
+        grid-template-columns: 1.2fr 0.9fr 0.9fr 1.5fr;
+        gap: 1.5rem;
+    }
+
+    &__column4
+    {
+        justify-self: end;
+        
+
+    }
+    
 
 
 }
@@ -245,5 +303,9 @@
 .svg-icon
 {
     width: 2rem;
+    @include breakpoint-up(large)
+    {
+        width: 1.125rem;
+    }
 
 }
