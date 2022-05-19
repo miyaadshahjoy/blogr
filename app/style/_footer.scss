@@ -1,0 +1,249 @@
+// footer 1
+
+.footer1
+{
+    background-image: url('../../images/bg-tablet-pattern-white.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom -50px left -300px;
+    
+
+    @include breakpoint-up (large)
+    {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: top -40px left 140px;
+        background-color: #f25f3a;
+        text-align: center;
+        padding-top: 5.625rem;
+        padding-bottom: 5.625rem;
+
+        &::before
+        { 
+            content: "";
+            position: absolute;
+            background-image: url(../../images/bg-tablet-pattern-white.svg);
+            background-repeat: no-repeat;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-size: 50%;
+            background-position: bottom 100px right -460px;
+        
+            
+            
+            
+
+        }
+
+    }
+
+
+    background-color: $brightRed;
+    text-align: center;
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem;
+    
+    &__grid
+    {
+        @include breakpoint-up(large)
+        {
+            @include breakpoint-up(large)
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+        }
+
+
+    }
+
+    &__text
+    {
+        @include breakpoint-up(large)
+        {
+            align-self: center;
+        }
+        h2
+        {
+            font-size: 2.1875rem;
+            color: $white;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+    
+            @include breakpoint-up(large)
+            {
+                font-size: 2.3125rem;
+                text-align: start;
+                justify-content: center;
+                    
+            }
+
+        }
+        
+        
+        
+        
+    }
+    &__ctaButton
+    {
+        @include breakpoint-up(large)
+        {
+            text-align: end;
+            justify-content: center;
+            align-self: center;
+        }
+    }
+}
+
+
+//footer 2
+
+.footer2
+{
+    background-color: $veryDarkBlue;
+    padding-top: 3.125rem;
+    &__form
+    {
+        margin-bottom: 3.5625rem;
+        input[type= "email"]
+        {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 0.75rem;
+            color: $darkBlue;
+            padding: 1rem 2rem;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+            margin-right: 0.5rem;
+        }
+        ::placeholder
+        {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 0.75rem;
+
+        }
+        input[type= "button"]
+        {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 0.75rem;
+            color: $white;
+            background-color: $brightRed;
+            padding: 1rem 2rem;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+
+        }
+        
+    }
+    &__link
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2.8125rem;
+    }
+
+    &__link1
+    {
+        display: inline-flex;
+        
+        flex-direction: column;
+        align-items: start;
+        padding-left: 2.3125rem;
+        
+        a
+        {
+            
+            font-size: $smallFont;
+            color: $white;
+            font-weight: 400;
+            
+            &:not(:last-child)
+            {
+                margin-bottom: 1.125rem;
+
+            }
+
+        }
+        
+    }
+    &__link2
+    {
+        display: inline-flex;
+        
+        flex-direction: column;
+        align-items: start;
+        padding-left: 2.3125rem;
+        
+        a
+        {
+            
+            font-size: $smallFont;
+            color: $white;
+            font-weight: 400;
+            &:not(:last-child)
+            {
+                margin-bottom: 1.125rem;
+
+            }
+
+        }
+    }
+
+    &__socialIcons
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        a
+        {
+            
+            
+            &:not(:last-child)
+            {
+                margin-right: 2rem;
+
+            }
+            
+            
+            &:hover
+            {
+                svg path
+                {
+                    fill: $brightRed;
+                    
+                    
+                }
+            }
+            
+
+            
+        }
+    }
+    &__logo
+    {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__copyright
+    {
+        font-size: 0.75rem;
+        color: $darkGrayishBlue;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+
+}
+
+.svg-icon
+{
+    width: 2rem;
+
+}
