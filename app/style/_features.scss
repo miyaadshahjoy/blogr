@@ -128,7 +128,7 @@
 .carousel
 
 {
-    overflow: hidden;
+    
     @include breakpoint-up(large)
     {
         margin-bottom: 2.8125rem;
@@ -238,12 +238,13 @@
 
 .wrapper
 {
+    overflow: hidden;
 
-    margin-bottom: 2.8125rem;
+    padding-bottom: 2.8125rem;
 
     @include breakpoint-up(large)
     {
-        margin-bottom: 11.25rem;
+        padding-bottom: 11.25rem;
     }
 
 }
