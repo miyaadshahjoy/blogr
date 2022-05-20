@@ -530,10 +530,6 @@ p {
   overflow: hidden;
 }
 
-.carousel {
-  overflow: hidden;
-}
-
 @media (min-width: 64em) {
   .carousel {
     margin-bottom: 2.8125rem;
@@ -630,12 +626,13 @@ p {
 }
 
 .wrapper {
-  margin-bottom: 2.8125rem;
+  overflow: hidden;
+  padding-bottom: 2.8125rem;
 }
 
 @media (min-width: 64em) {
   .wrapper {
-    margin-bottom: 11.25rem;
+    padding-bottom: 11.25rem;
   }
 }
 
