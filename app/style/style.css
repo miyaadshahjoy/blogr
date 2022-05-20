@@ -530,6 +530,10 @@ p {
   overflow: hidden;
 }
 
+.carousel {
+  overflow: hidden;
+}
+
 @media (min-width: 64em) {
   .carousel {
     margin-bottom: 2.8125rem;
