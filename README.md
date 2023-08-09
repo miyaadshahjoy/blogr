@@ -1,1 +1,1 @@
-[# manageLandingPage](https://github.com/miyaadjoy)https://github.com/miyaadjoy
+[# manageLandingPage](https://miyaadjoy.github.io/manageLandingPage/)
